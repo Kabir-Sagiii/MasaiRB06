@@ -1,0 +1,165 @@
+Create h2 Element
+--------------------------
+const h2=React.createElement('h2',null,"Hello React JS")
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(h2)
+
+Create <div><h2></div>
+--------------------------------
+const div=React.createElement('div',null,React.createElement(''h2',null,"Hello React JS"))
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(div)
+
+Create img with Attributes like src, width and height
+--------------------------------------------------------------------
+const img=React.createElement('img',{src:"https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png",width:"500",height:"300"},null)
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(img)
+
+Repeat same Task with JSX
+
+Create h2 Element
+-------------------------------------
+const h2 = <h2> Hello Javascript </h2>
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(h2)
+
+Create h2 Element inside div
+-------------------------------------
+const div = <div><h2> Hello Javascript </h2></div>
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(div)
+
+Create img with Attributes like src, width and height
+--------------------------------------------------------------------
+const img= <img src="https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png" width="500" height="300" />
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(img)
+
+
+Create a function and create h2 init
+----------------------------------------------
+function createh2(){
+    return <h2>Hello i am h2 buddy</h2>
+}
+
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(createh2())
+
+
+
+Create a function then create a variable and bind variable to the UI
+---------------------------------------------------------------------------------------
+function createUI(){
+var title= "React look Awesome Dude"
+return <h2>{title}</h2>
+          }
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(createUI())
+
+
+Create a function then create a object and Implement Some UI then bind object data  to the UI
+----------------------------------------------------------------------------------------------------------------------------
+function createUI(){
+var data = {
+ title : "React JS from Facebook",
+ src:"https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1272554/regular_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
+ width:300,
+ height:300
+}
+var title= "React look Awesome Dude"
+return  <div> 
+    <h2> {data.title} </h2>
+<img src={data.src} width={data.width} height={data.height}
+</div>
+          }
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(createUI());
+
+
+Reusability of UI 
+------------------------
+function createUI(){
+var data = {
+ title : "React JS from Facebook",
+ src:"https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1272554/regular_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
+ width:300,
+ height:300
+}
+var title= "React look Awesome Dude"
+return  <div> 
+    <h2> {data.title} </h2>
+<img src={data.src} width={data.width} height={data.height}/>
+</div>
+          }
+
+function Images(){
+  return <div> {createUI()}  {createUI()} </div>
+}
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(Images());
+
+
+
+Reusability of UI with New Technique of Calling the functions
+--------------------------------------------------------------------------------
+
+function CreateUI(){
+var data = {
+ title : "React JS from Facebook",
+ src:"https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1272554/regular_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
+ width:300,
+ height:300
+}
+var title= "React look Awesome Dude"
+return  <div> 
+    <h2> {data.title} </h2>
+<img src={data.src} width={data.width} height={data.height}/>
+</div>
+          }
+
+function Images(){
+  return <div> <CreateUI /> <CreateUI /></div>
+}
+var root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(Images());
+
+
+
+
+
+
+Codesandbox
+-------------------
+
+Create Same Example by Creating UI in different Different File
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
