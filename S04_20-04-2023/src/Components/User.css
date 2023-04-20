@@ -1,0 +1,14 @@
+#container {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  box-shadow: 0 0 10px black;
+  margin: 30px auto;
+}
+.leftPanel {
+  width: 40%;
+}
+.rightPanel {
+  width: 60%;
+  padding: 30px;
+}

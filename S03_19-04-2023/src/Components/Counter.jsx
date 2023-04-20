@@ -7,6 +7,7 @@ var counterStyle = {
   margin: "100px auto",
 };
 function Counter({ countValue, onClick }) {
+  console.log("hello");
   //   const [state, setState] = useState(0);
   //   const [name, setName] = useState("Sagar");
   //re-render : render - calling the component

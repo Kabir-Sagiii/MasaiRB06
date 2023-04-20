@@ -11,12 +11,12 @@ function App() {
   const [state, setState] = useState(90);
   return (
     <div className="App">
-      <A />
-      <B />
-      {/* <Tech />
+      {/* <A />
+      <B /> */}
+      {/* <Tech /> */}
       <Counter countValue={state} onClick={setState} />
 
-      <Counter countValue={state} onClick={setState} /> */}
+      {/* <Counter countValue={state} onClick={setState} /> */}
     </div>
   );
 }
